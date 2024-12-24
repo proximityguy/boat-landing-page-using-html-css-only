@@ -4,11 +4,97 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <link rel="stylesheet" href="/boat-landing-page-using-html-css-only\style.css">
-    <title>boat</title>
+    <!-- <link rel="stylesheet" href="/boat-landing-page-using-html-css-only\style.css"> -->
+    <title>Tech-Shop</title>
+    <style>
+        .header {
+            border: 1px solid red;
+            padding: 10px;
+            margin: 5px;
+            display: grid;
+            grid-template-rows: 20px, 100px;
+        }
+
+        .navbar {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            
+            align-items: flex-start;
+
+        }
+
+        .logo {
+            border: 1px dotted green;
+            padding: 1px;
+           
+        }
+
+        .nav-btn {
+            border: 1px dotted green;
+            padding: 1px;
+        }
+
+        .corousel {
+            border: 1px solid black;
+            padding: 2px;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content:space-between;
+        }
+
+        .corousel-detail {
+            border: 1px solid red;
+            padding: 2px;
+
+        }
+
+        .corousel-img img{
+            
+            border: 1px solid red;
+            width: 100%;
+            height: 100%;
+            
+        }
+    </style>
 </head>
 
 <body>
+    <section class="header">
+        <!-- NAVBAR begins here -->
+        <div class="navbar">
+            <div class="logo">
+                <h1>Tech-Shop</h1>
+            </div>
+
+            <div class="nav-btn">
+                <a href="#">Search</a>
+                <a href="#">Cart</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+
+        <!-- HEADER corosel begins here -->
+        <div class="corousel">
+            <div class="corousel-detail">
+                <p><h3>boat Airdopes 131 </h3>
+                <h2>Featherweight for <br>Comfort All-Day.</h2>
+                <h3>$1,099 &ThickSpace;<span class="original-price">$2,990</span></h3>
+            </p>
+            </div>
+            <div class="corousel-img">
+                <!-- \images\products\boat131-3.png -->
+                <img src="\images\products\boat131-3.png" alt="picture">
+            </div>
+        </div>
+
+    </section>
+
+
 </body>
 
 </html>
