@@ -14,94 +14,97 @@
 </head>
 
 <body>
-    <section class="header">
-        <!-- NAVBAR begins here -->
-        <div class="navbar">
-            <div class="logo">
-                <p>Tech-Shop</p>
-            </div>
-            <div class="nav-btn">
-                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
-                <a href="\cart\cart.html"><ion-icon name="cart-outline"></ion-icon></a>
-                <a href="#" onclick="showSignup()"><ion-icon name="person-circle-outline"></ion-icon></a>
+    <section class="container">
+        <section class="header">
+            <!-- NAVBAR begins here -->
+            <div class="navbar">
+                <div class="logo">
+                    <p>Tech-Shop</p>
+                </div>
+                <div class="nav-btn">
+                    <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                    <a href="\cart\cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+                    <a href="#" onclick="showSignup()"><ion-icon name="person-circle-outline"></ion-icon></a>
+                </div>
+
             </div>
 
+            <!-- HEADER corosel begins here -->
+            <div class="corousel">
+                <div class="corousel-detail">
+                    <p>
+                    <h3>boat Airdopes 131 </h3>
+                    <h2>Featherweight for <br>Comfort All-Day.</h2>
+                    <h3>$1,099 &ThickSpace;<span class="original-price">$2,990</span></h3>
+                    </p>
+                </div>
+                <div class="corousel-img">
+                    <!-- \images\products\boat131-3.png -->
+                    <img src="\images\products\boat131-3.png" alt="picture">
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <!-- <div class="product-head"></div> -->
+            <div class="featured-cards">
+
+                <figure class="card-body">
+
+                    <img src="\images\products\jbl-endu-1.png" alt="card-item-1">
+                    <figcaption>JBL Endurance Run Sports</figcaption>
+                    <p>
+                    <h3>$999 &ThickSpace;<span class="original-price">$1,599</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\boat203-1.png" alt="card-item-2">
+                    <figcaption>boAt airdopes 203</figcaption>
+                    <p>
+                    <h3>$1,074 &ThickSpace;<span class="original-price">$3,999</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\boat518-1.png" alt="card-item-3">
+                    <figcaption>boAt Rockerz 518</figcaption>
+                    <p>
+                    <h3>$1,299 &ThickSpace;<span class="original-price">$3,990</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\jbl760nc-1.png" alt="card-item-4">
+                    <figcaption>JBL Tune 760NC</figcaption>
+                    <p>
+                    <h3>$5,999 &ThickSpace;<span class="original-price">$7,999</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\boat255r-1.png" alt="card-item-5">
+                    <figcaption>boAt Rockerz 255</figcaption>
+                    <p>
+                    <h3>$899 &ThickSpace;<span class="original-price">$2,990</span></h3>
+                    </p>
+                </figure>
+
+            </div>
+        </section>
+
+        <div id="signupModal"
+            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 2;">
+            <iframe src="\account\account.html" style="border: none; width: 100%; height: 100%;">
+            </iframe>
         </div>
 
-        <!-- HEADER corosel begins here -->
-        <div class="corousel">
-            <div class="corousel-detail">
-                <p>
-                <h3>boat Airdopes 131 </h3>
-                <h2>Featherweight for <br>Comfort All-Day.</h2>
-                <h3>$1,099 &ThickSpace;<span class="original-price">$2,990</span></h3>
-                </p>
-            </div>
-            <div class="corousel-img">
-                <!-- \images\products\boat131-3.png -->
-                <img src="\images\products\boat131-3.png" alt="picture">
-            </div>
-        </div>
+        <script>
+            function showSignup() {
+                document.getElementById('signupModal').style.display = 'block';
+            }
+        </script>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     </section>
-
-    <section class="featured-products">
-        <!-- <div class="product-head"></div> -->
-        <div class="featured-cards">
-
-            <figure class="card-body">
-
-                <img src="\images\products\jbl-endu-1.png" alt="card-item-1">
-                <figcaption>JBL Endurance Run Sports</figcaption>
-                <p>
-                <h3>$999 &ThickSpace;<span class="original-price">$1,599</span></h3>
-                </p>
-            </figure>
-            <figure class="card-body">
-                <img src="\images\products\boat203-1.png" alt="card-item-2">
-                <figcaption>boAt airdopes 203</figcaption>
-                <p>
-                <h3>$1,074 &ThickSpace;<span class="original-price">$3,999</span></h3>
-                </p>
-            </figure>
-            <figure class="card-body">
-                <img src="\images\products\boat518-1.png" alt="card-item-3">
-                <figcaption>boAt Rockerz 518</figcaption>
-                <p>
-                <h3>$1,299 &ThickSpace;<span class="original-price">$3,990</span></h3>
-                </p>
-            </figure>
-            <figure class="card-body">
-                <img src="\images\products\jbl760nc-1.png" alt="card-item-4">
-                <figcaption>JBL Tune 760NC</figcaption>
-                <p>
-                <h3>$5,999 &ThickSpace;<span class="original-price">$7,999</span></h3>
-                </p>
-            </figure>
-            <figure class="card-body">
-                <img src="\images\products\boat255r-1.png" alt="card-item-5">
-                <figcaption>boAt Rockerz 255</figcaption>
-                <p>
-                <h3>$899 &ThickSpace;<span class="original-price">$2,990</span></h3>
-                </p>
-            </figure>
-
-        </div>
-    </section>
-
-    <div id="signupModal"
-        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 2;">
-        <iframe src="\account\account.html" style="border: none; width: 100%; height: 100%;">
-        </iframe>
-    </div>
-
-    <script>
-        function showSignup() {
-            document.getElementById('signupModal').style.display = 'block';
-        }
-    </script>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

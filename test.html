@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <title>footer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 1px solid slateblue;
+            background: #fff;
+            color: #151515;
+            height: 1000px;
+            font-family: "Roboto", serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a73e8;
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .header {
+            border: 1px solid;
+            margin: 2px 2px 10px 2px;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+        }
+
+        div.navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        .logo {
+            position: fixed;
+            top: 7px;
+            left: 2px;
+            z-index: 3;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .nav-btn {
+            position: fixed;
+            top: 7px;
+            right: 2px;
+            z-index: 3;
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .nav-btn a {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* footer part  */
+        .footer {
+            border: 1px solid salmon;
+            width: inherit;
+            height: 350px;
+            margin: 2px;
+            position: relative;
+            background-color: #fff;
+            border-radius: 3px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-content {
+            height: 300px;
+            display: flex;
+            padding: 40px 60px;
+            width: 100%;
+            border-bottom: 1px solid #84849D;
+        }
+
+        .footer-section {
+            width: 23%;
+        }
+
+        .footer-content .form {
+            width: 33%;
+        }
+
+        .footer-content .form p {
+            font-size: 14px;
+
+        }
+
+        .footer-section input {
+            border: 1px solid #84849D;
+            padding: 10px 25px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section button {
+            padding: 12px 78px;
+            color: white;
+            font-size: 15px;
+            background-color: #5D7CC5;
+            border: none;
+            border-radius: 5px;
+
+        }
+
+        .footer-section li {
+            list-style: none;
+            padding-bottom: 7px;
+        }
+
+        .footer-section li a {
+            text-decoration: none;
+            color: #000948;
+        }
+
+        .footer-section h3 {
+            color: #010837;
+        }
+
+
+
+
+
+
+        .footer-bottom {
+            border: 1px solid red;
+            /* position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0; */
+
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #84849D;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: center;
+        }
+
+        div.copyright {
+            border: 5px solid;
+            width: max-content;
+        }
+
+        div.btn-group {
+            border: 1px solid green;
+            /* margin: auto;
+            margin-top: 0;
+            margin-bottom: 0; */
+            /* height: 40px; */
+            /* width: 100%; */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 10px;
+            /* position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0; */
+        }
+
+        button.fb-btn {
+            width: 30px;
+
+        }
+
+        button.twitter-btn {
+            width: 30px;
+        }
+
+        button.insta-btn {
+            width: 30px;
+        }
+
+        button.git-btn {
+            width: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="container">
+        <section class="header">
+            <!-- NAVBAR begins here -->
+            <div class="navbar">
+                <div class="logo">
+                    <p>Tech-Shop</p>
+                </div>
+                <div class="nav-btn">
+                    <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                    <a href="\cart\cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="person-circle-outline"></ion-icon></a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer begins here -->
+
+        <section class="container">
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section form">
+                        <h3>Tech-Shop</h3>
+                        <p>Subscribe to our email alerts to receive early discount offers, and new products info.</p>
+                        <input type="email" placeholder="Enter your email address">
+                        <button>Subscribe</button>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Cancel Order</a></li>
+                            <li><a href="#">Return Order</a></li>
+                            <li><a href="#">Warranty Info</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Policies</h3>
+                        <ul>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Service Centres</a></li>
+                            <li><a href="#">careers</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>2024 | All Rights Reserved. Built by | MANISH KUMAR</p>
+                    </div>
+
+                    <div class="btn btn-group">
+                        <button class="fb-btn">
+                            <a href="https://www.facebook.com/login/"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </button>
+
+                        <button class="twitter-btn">
+                            <a href="https://x.com/i/flow/login"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </button>
+
+                        <button class="insta-btn">
+                            <a href="https://www.instagram.com/accounts/login/?hl=en"><ion-icon
+                                    name="logo-instagram"></ion-icon></a>
+                        </button>
+
+                        <button class="git-btn">
+                            <a href="https://github.com/topics/login"><ion-icon name="logo-github"></ion-icon></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </section>
+</body>
+
+</html>
