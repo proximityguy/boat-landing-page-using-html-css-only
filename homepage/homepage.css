@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  background-color: #151515;
   color: white;
   height: 5000px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Roboto", serif;
 }
+
 a {
   text-decoration: none;
   color: #1a73e8;
@@ -28,24 +29,20 @@ a {
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
- 
 }
 
 .logo {
-  /* border: 1px solid red; */
   position: fixed;
   margin: 5px;
   padding: 5px;
 }
 
 .logo p {
-  /* border: 1px solid red; */
   margin: 5px;
   padding: 5px;
 }
 
 .nav-btn {
-  /* border: 1px solid red; */
   position: fixed;
   top: 7px;
   right: 2px;
@@ -54,12 +51,13 @@ a {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .nav-btn a {
-  /* border: 1px solid red; */
   margin: 5px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .corousel {
@@ -71,6 +69,12 @@ a {
   justify-content: space-evenly;
 }
 
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+
+}
 .corousel-detail {
   padding: 10px;
   margin: 10px;
@@ -110,7 +114,6 @@ a {
   border: 1px solid red;
   text-align: center;
   font-size: 10px;
-  
 }
 .card-body img {
   border: 1px solid;

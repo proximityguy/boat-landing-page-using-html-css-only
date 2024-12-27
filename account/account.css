@@ -6,17 +6,17 @@
 
 body {
   background-color: transparent;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Roboto", serif;
 }
 
 a {
   text-decoration: none;
-  color: #1a73e8;
+  color: #fff;
   display: block;
   font-size: 15px;
 }
 .container {
-  background-color: #262626;
+  background: #262626;
   color: white;
   max-width: 350px;
   height: fit-content;
@@ -32,6 +32,23 @@ a {
 .top-content {
   display: block;
   margin: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #151515;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.close-btn:hover {
+  background: darkred;
 }
 
 .heading {
@@ -65,11 +82,15 @@ input.input {
 
 button.btn {
   display: inline-block;
-  border: 1px solid red;
   height: 40px;
   cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  text-decoration: none;
 }
 button.signup-btn {
+  background-color: #b3261e;
   display: block;
   width: 100%;
   padding: 0;
@@ -79,7 +100,6 @@ button.signup-btn {
 }
 
 div.btn-group {
-  border: 1px solid;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -87,67 +107,33 @@ div.btn-group {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-button.fb-btn{
+button.fb-btn {
   width: 80px;
-  position: relative;
-  left: 1px;
+  background-color: #1a73e8;
 }
-button.google-btn{
+button.google-btn {
   width: 80px;
-  position: relative;
-  left: 20px;
+  background-color: #b3261e;
 }
 
-button.twitter-btn{
+button.twitter-btn {
   width: 80px;
-  position: absolute;
-  left: 40px;
+  background-color: #1a73e8;
 }
-.striped{
-  /* display: inline-block; */
-  border: 1px solid red;
+.striped {
   height: 40px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 .striped-text {
   display: block;
   width: 100%;
-  /* height: 40px; */
- margin: auto;
- margin-top: 10px;
- margin-bottom: 10px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
-
-/*
-.striped {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0;
-
-  &-line {
-    flex: auto;
-    flex-basis: auto;
-    border: none;
-    outline: none;
-    height: 2px;
-    background: var(--color-grayish);
-  }
-
-  &-text {
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: inherit;
-    color: var(--color-black);
-    margin: 0 1rem;
-  }
-} */
