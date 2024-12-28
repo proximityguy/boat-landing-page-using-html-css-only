@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <title>footer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: #000000;
+            color: #ffffff;
+            /* height: auto; */
+            font-family: "Roboto", serif;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        /* footer part  */
+        .footer {
+            width: inherit;
+            display: block;
+            margin: 5px;
+            padding: 5px;
+            position: relative;
+        }
+
+        .footer-content {
+            height: 220px;
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .footer-section {
+            width: 20%;
+            padding: 10px 10px;
+        }
+
+        .footer-content .form {
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+        }
+
+        .footer-content .form p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section input {
+            width: auto;
+            padding: 10px 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background:inherit;
+            border: 2px solid gray;
+            color: #ffffff;
+        }
+
+        input::placeholder {
+            color: #ffffff;
+        }
+
+        .footer-section input placeholder {
+            color: #ffffff;
+        }
+
+        .form button {
+            width: 200px;
+            height: 50px;
+            color: #ffffff;
+            font-size: 15px;
+            background-color: #b90000;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .footer-section li,
+        h3 {
+            list-style: none;
+            margin: 2px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+        .footer-bottom {
+            margin: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div.btn-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        div.btn button {
+            width: 60px;
+            height: 50px;
+            border: none;
+            background: transparent;
+        }
+
+        div.btn a {
+            font-size: xx-large;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <section class="container">
+        <!-- footer begins here -->
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section form">
+                        <h3>Tech-Shop</h3>
+                        <p>Subscribe to our email alerts to receive early discount offers, and new products info.</p>
+                        <input type="email" placeholder="Email Address*">
+                        <button>Subscribe</button>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Cancel Order</a></li>
+                            <li><a href="#">Return Order</a></li>
+                            <li><a href="#">Warranty Info</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Policies</h3>
+                        <ul>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Service Centres</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>2024 | All Rights Reserved. Built by | MANISH KUMAR</p>
+                    </div>
+
+                    <div class="btn btn-group">
+                        <button class="fb-btn">
+                            <a href="https://www.facebook.com/login/"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </button>
+
+                        <button class="twitter-btn">
+                            <a href="https://x.com/i/flow/login"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </button>
+
+                        <button class="insta-btn">
+                            <a href="https://www.instagram.com/accounts/login/?hl=en"><ion-icon
+                                    name="logo-instagram"></ion-icon></a>
+                        </button>
+
+                        <button class="git-btn">
+                            <a href="https://www.linkedin.com/login"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </section>
+</body>
+
+</html>

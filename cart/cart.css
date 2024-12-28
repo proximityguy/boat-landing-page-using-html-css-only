@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 .container{
-  background: #fff;
-  color: black;
+  background: #000000;
+  color: #ffffff;
   height: 5000px;
   font-family: "Roboto", serif;
 }
