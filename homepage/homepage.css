@@ -48,7 +48,7 @@ div.navbar {
   position: fixed;
   top: 7px;
   right: 2px;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
@@ -119,3 +119,103 @@ div.navbar {
   width: 100px;
   height: 100px;
 }
+
+
+/* footer part  */
+.footer {
+  width: inherit;
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+}
+
+.footer-content {
+  height: 220px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.footer-section {
+  width: 20%;
+  padding: 10px 10px;
+}
+
+.footer-content .form {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.footer-content .form p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-section input {
+  width: auto;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background:inherit;
+  border: 2px solid gray;
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+.footer-section input placeholder {
+  color: #ffffff;
+}
+
+.form button {
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  font-size: 15px;
+  background-color: #b90000;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-section li,
+h3 {
+  list-style: none;
+  margin: 2px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.footer-bottom {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+div.btn button {
+  width: 60px;
+  height: 50px;
+  border: none;
+  background: transparent;
+}
+
+div.btn a {
+  font-size: xx-large;
+}
+
