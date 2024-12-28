@@ -77,8 +77,8 @@ input.input {
   margin-bottom: 10px;
   position: relative;
   z-index: 2;
-  background-color: transparent;
 }
+
 
 button.btn {
   display: inline-block;
@@ -131,9 +131,14 @@ button.twitter-btn {
 }
 .striped-text {
   display: block;
-  width: 100%;
+  width: fit-content;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+  position: absolute;
+  bottom: 111px;
+  right: 125px;
+  background-color: #262626;
+  
 }
