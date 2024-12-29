@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        .billing-page {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Item Description Section */
+        .item-description {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .item-card {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+
+        .item-image {
+            border: 1px solid red;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-name {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+
+        .item-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .decrease-btn,
+        .increase-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .item-count {
+            font-size: 16px;
+        }
+
+        .item-description {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 400px;
+            /* Adjust the height as needed */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding-right: 10px;
+            /* Add space for the scrollbar */
+        }
+
+        /* Add styling for the scrollbar (optional) */
+        .item-description::-webkit-scrollbar {
+            width: 8px;
+            /* Width of the scrollbar */
+        }
+
+        .item-description::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Background color of the scrollbar track */
+            border-radius: 4px;
+        }
+
+        .item-description::-webkit-scrollbar-thumb {
+            background: #007BFF;
+            /* Color of the scrollbar thumb */
+            border-radius: 4px;
+        }
+
+        .item-description::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+            /* Darker shade on hover */
+        }
+
+        /* Price Summary Section */
+        .price-summary {
+            width: 30%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .price-summary h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .price-summary p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .price-summary h3 {
+            margin: 15px 0;
+            font-size: 20px;
+            color: #007BFF;
+        }
+
+        .payment-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="billing-page">
+        <!-- Item Description Section -->
+        <div class="item-description">
+            <!-- Card 1 -->
+            <div class="item-card">
+                <img src="item1.jpg" alt="Item 1 Image" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">Item Name 1</h3>
+
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item-card">
+                <img src="item1.jpg" alt="Item 1 Image" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">Item Name 1</h3>
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item-card">
+                <img src="item1.jpg" alt="Item 1 Image" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">Item Name 1</h3>
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item-card">
+                <img src="item1.jpg" alt="Item 1 Image" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">Item Name 1</h3>
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="item-card">
+                <img src="item2.jpg" alt="Item 2 Image" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">Item Name 2</h3>
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="item-card">
+                <img src="item3.jpg" alt="Item 3 Image" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">Item Name 3</h3>
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Summary Section -->
+        <div class="price-summary">
+            <h2>Price Summary</h2>
+            <hr>
+            <!-- <p>Total Items: <span class="total-items">3</span></p> -->
+            <p>Original Price: $<span class="original-price">150</span></p>
+            <p>Discount: -$<span class="discount-price">20</span></p>
+            <p>Delivery Charges: $<span class="delivery-charges">5</span></p>
+
+            <hr>
+
+            <h3>Payable Amount: $<span class="payable-amount">135</span></h3>
+            <button class="payment-btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

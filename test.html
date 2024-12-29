@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iframe Layout</title>
+    <title>test</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
 
 
@@ -14,7 +14,78 @@
             margin: 5px;
             font-family: Arial, sans-serif;
             width: 100%;
-            height: 500px;
+            /* height: 500px; */
+        }
+        
+        .billing-page {
+            /* background-color: #010000; */
+            /* color: #ffffff; */
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .item-list {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .item-card {
+            /* border-bottom: 1px solid red; */
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* background-color: antiquewhite; */
+        }
+
+        .item-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .item-name {
+            font-size: 16px;
+            margin: 0 0 10px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .item-controls{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+
+
+
+
+        .price-summary {
+            width: 30%;
+            border: 1px solid blue;
+
+            padding: 10px 20px;
+        }
+
+        .price-summary p {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr.line {
+            /* color: #6a0f0f; */
+            border: 1px solid red;
         }
     </style>
 
@@ -23,13 +94,114 @@
 
 <body>
 
+    <section class="billing-page">
+        <!-- item description begins here -->
+        <div class="item-list">
+
+            <div class="item-card">
+
+                <div class="item-image">
+                    <img src="images\products\jbl660nc-1.png" alt="" class="item-image">
+                </div>
+
+                <div class="item-details">
+                    <h3 class="item-name">JBL Live 660NC Wireless Over-Ear NC Headphones</h3>
+                    <h4 class="price">$1,099 &ThickSpace;
+                        <span class="original-price">$2,990</span>
+                    </h4>
+
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <!-- in place of span class direct use the style color = red -->
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+
+<hr class="line">
+
+            <div class="item-card">
+
+                <div class="item-image">
+                    <img src="images\products\boat518-1.png" alt="" class="item-image">
+                </div>
+
+                <div class="item-details">
+                    <h3 class="item-name">boAt Rockerz 518 On-Ear Wireless Headphones</h3>
+                    <h4 class="price">$1,099 &ThickSpace;
+                        <span class="original-price">$2,990</span>
+                    </h4>
+
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+
+<hr>
+
+            <div class="item-card">
+
+                <div class="item-image">
+                    <img src="images\products\sonyXb910n-1.png" alt="" class="item-image">
+                </div>
+
+                <div class="item-details">
+                    <h3 class="item-name">Sony WH0XB910N Wireless Over-Ear Headphones</h3>
+                    <h4 class="price">$1,099 &ThickSpace;
+                        <span class="original-price">$2,990</span>
+                    </h4>
+
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+
+<hr class="hr-line">
+
+            <div class="item-card">
+
+                <div class="item-image">
+                    <img src="images\products\boat131-1.png" alt="" class="item-image">
+                </div>
+
+                <div class="item-details">
+                    <h3 class="item-name">boAt Airdopes 131 Wireless In-Ear Earbuds</h3>
+                    <h4 class="price">$1,099 &ThickSpace;
+                        <span class="original-price">$2,990</span>
+                    </h4>
+
+                    <div class="item-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="item-count">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
 
 
+        <!-- price summary begins here -->
+        <div class="price-summary">
+            <h3>Price Summary (4 items)</h3>
+            <hr>
+            <h5>Original Price <span>22,978</span></h5>
+            <h5>Discount <span style="color: green;">-10,132</span></h5>
+            <h5>Delivery <span style="color: green;">Free</span></h5>
+            <hr>
+            <h5>Total Price <span>12,846</span></h5>
 
+        </div>
 
-
+    </section>
 </body>
 
 </html>
