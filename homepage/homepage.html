@@ -173,23 +173,26 @@
 
 
 
+<div class="iframe">
 
 
-        <iframe src="\main\footer.html" style="border: none; width: 100%; height: 100%;">
+
+
+    <div id="signupModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 2;">
+        <iframe src="\account\account.html" style="border: none; width: 100%; height: 100%;">
         </iframe>
+    </div>
 
+    <script>
+        function showSignup() {
+            document.getElementById('signupModal').style.display = 'block';
+        }
+    </script>
+    
+</div>
 
-        <div id="signupModal"
-            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 2;">
-            <iframe src="\account\account.html" style="border: none; width: 100%; height: 100%;">
-            </iframe>
-        </div>
-
-        <script>
-            function showSignup() {
-                document.getElementById('signupModal').style.display = 'block';
-            }
-        </script>
+        
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -22,6 +22,12 @@ a {
   font-size: 14px;
   cursor: pointer;
 }
+
+a:hover{
+  color: orangered;
+}
+
+
 /* navbar styles */
 .navbar {
   border: 1px solid red;
@@ -33,13 +39,16 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: fit-content;
+  width: 100%;
+
 }
 
 div.btn-group {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 10px;
 }
 
 div.logo p {
@@ -55,8 +64,48 @@ div.btn button {
   background: transparent;
 }
 
-div.btn a {
+div.btn ion-icon {
   font-size: x-large;
+}
+/* navbar ends here */
+
+/* popup begins here */
+
+.popup {
+  background-color: rgba(15, 15, 15, 1);
+  color: #ffffff;
+  border: 2px solid rgba(40, 40, 40, 1);
+  border-radius: 2px;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  right:10px ;
+  text-align: start;
+}
+
+.popup h4,
+p {
+  margin: 5px 0;
+}
+
+.popup .login-popup-btn {
+  border: 2px solid gray;
+  background-color: rgb(237, 17, 17);
+  color: #ffffff;
+  width: 100%;
+  height: 35px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+}
+
+.hide:hover .popup {
+  display: block;
+  z-index: 2;
+
 }
 
 /* advantage box */
@@ -89,6 +138,7 @@ div.btn a {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0px;
+  
   padding: 2px;
   background: #000000;
   color: #ffffff;
@@ -146,13 +196,11 @@ div.btn a {
   display: block;
   margin: 0;
   padding: 5px;
-  /* position: relative; */
 }
 
 .footer-content {
   background-color: #000000;
   color: #ffffff;
-  /* height: 220px; */
   width: auto;
   display: flex;
   flex-direction: row;
@@ -193,6 +241,14 @@ input::placeholder {
   color: #ffffff;
 }
 
+.footer-section input:hover {
+  transform: scale(1.01);
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
+
 .form button {
   width: 200px;
   height: 50px;
@@ -201,6 +257,13 @@ input::placeholder {
   background-color: #b90000;
   border: none;
   border-radius: 5px;
+}
+
+.form button:hover{
+  transform: scale(1.01);
+  color: orangered;
+  background-color: rgb(200, 200, 200);
+  border: 1px solid orangered;
 }
 
 .footer-section li,
@@ -214,7 +277,6 @@ h3 {
 .footer-bottom {
   background-color: #000000;
   color: #ffffff;
-  /* margin: 10px; */
   padding-left: 10px;
   padding-right: 10px;
   line-height: 30px;

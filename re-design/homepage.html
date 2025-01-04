@@ -18,25 +18,61 @@
     <section class="container">
 
         <!-- navbar begins here -->
+
         <div class="navbar">
             <div class="logo">
                 <p>Tech-Shop</p>
             </div>
 
             <div class="btn btn-group">
-                <button class="search-btn">
-                    <a href="#"><ion-icon name="search-outline"></ion-icon></a>
-                </button>
+                <div>
+                    <button class="search-btn">
+                        <!-- here href is blank bcuz search btn is not functional -->
+                        <a href=""><ion-icon name="search-outline"></ion-icon></a>
+                    </button>
+                </div>
+                <div>
+                    <button class="cart-btn">
+                        <a href="cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+                    </button>
+                </div>
 
-                <button class="cart-btn">
-                    <a href="\cart\cart.html"><ion-icon name="cart-outline"></ion-icon></a>
-                </button>
+                <div class="hide">
+                    <button class="login-btn">
+                        <a href=""><ion-icon name="person-circle-outline"></ion-icon></a>
+                    </button>
 
-                <button class="login-btn">
-                    <a href="#"><ion-icon name="person-circle-outline"></ion-icon></a>
-                </button>
+                    <div class="popup">
+                        <h4>Hello!</h4>
+                        <p>Access account and manage orders</p>
+                        <button class="login-popup-btn" onclick="showSignup()">Login / Signup</button>
+                        <hr>
+                        <p>Please Login</p>
+                    </div>
+
+                </div>
+
             </div>
+
+
+
         </div>
+
+<!-- iframe for signup / login page  -->
+<div class="iframe">
+        <div id="signupModal"
+            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 5;">
+            <iframe src="./account.html" style="border: none; width: 100%; height: 100%;">
+            </iframe>
+        </div>
+
+        <script>
+            function showSignup() {
+                document.getElementById('signupModal').style.display = 'block';
+            }
+        </script>
+
+</div>
 
 
 
