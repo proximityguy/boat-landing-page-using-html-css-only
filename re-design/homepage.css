@@ -233,15 +233,20 @@ p {
   color: #ffffff;
 }
 
-input::placeholder {
-  color: #ffffff;
-}
 
-.footer-section input placeholder {
+.footer-section input:placeholder-shown {
   color: #ffffff;
 }
 
 .footer-section input:hover {
+  transform: scale(1.01);
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.footer-section input:focus {
   transform: scale(1.01);
   color: #000000;
   background-color: #ffffff;

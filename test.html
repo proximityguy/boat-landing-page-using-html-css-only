@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <title>Tech-Shop - home</title>
+
+    <!-- <link rel="stylesheet" href="homepage.css"> -->
+
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
@@ -15,7 +19,7 @@
         }
 
         .container {
-            background: rgba(15, 15, 15, 1);
+            background: #000000;
             color: #ffffff;
             font-family: "Roboto", serif;
             margin: 2px 2px 10px 2px;
@@ -38,7 +42,7 @@
 
         /* navbar styles */
         .navbar {
-            border: 1px solid red;
+            border: 1px solid greenyellow;
             padding-left: 10px;
             padding-right: 10px;
             line-height: 30px;
@@ -47,8 +51,9 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            height:fit-content;
+            height: fit-content;
             width: 100%;
+
         }
 
         div.btn-group {
@@ -71,10 +76,17 @@
             background: transparent;
         }
 
-        div.btn a {
+        div.btn ion-icon {
             font-size: x-large;
         }
 
+        /* navbar ends here */
+
+
+
+
+
+        /* popup signup */
         .popup {
             background-color: rgba(15, 15, 15, 1);
             color: #ffffff;
@@ -83,7 +95,7 @@
             padding: 20px;
             position: absolute;
             top: 50px;
-            right:10px ;
+            right: 10px;
             text-align: start;
         }
 
@@ -108,17 +120,288 @@
 
         .hide:hover .popup {
             display: block;
+            z-index: 2;
+
         }
 
-        
+        /* advantage box */
+
+        .advantage-box {
+            padding-bottom: 10px;
+            width: 100%;
+            height: 100%;
+            margin-bottom: auto;
+        }
+
+        .heading {
+            font-size: 20px;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+
+        .adv-grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            column-gap: 10px;
+        }
+
+        .adv-cards {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 0px;
+
+            padding: 2px;
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        .adv-cards>div>ion-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            color: red;
+            margin-left: 20px;
+        }
+
+        .adv-cards>div>h3 {
+            text-align: left;
+            font-size: 15px;
+            margin-left: 10px;
+            width: fit-content;
+        }
+
+        .adv-cards>div>p {
+            text-align: left;
+            font-size: 10px;
+            margin-left: 10px;
+            width: fit-content;
+        }
+
+        .item1 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .item2 {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .item3 {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        /* footer part  */
+
+        .footer {
+            /* border: 1px solid red; */
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 5px;
+        }
+
+        .footer-content {
+
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .footer-section {
+            width: 20%;
+            padding: 10px 10px;
+        }
+
+        .footer-content .form {
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+        }
+
+        .footer-content .form p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section input {
+            width: auto;
+            padding: 10px 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background: inherit;
+            border: 2px solid gray;
+            color: #ffffff;
+        }
+
+        .footer-section input:placeholder-shown {
+            color: #ffffff;
+        }
+
+        .footer-section input:hover {
+            transform: scale(1.01);
+            color: #000000;
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+        }
+
+        .footer-section input:focus {
+            transform: scale(1.01);
+            color: #000000;
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+        }
+
+        .form button {
+            width: 200px;
+            height: 50px;
+            color: #ffffff;
+            font-size: 15px;
+            background-color: #b90000;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form button:hover {
+            transform: scale(1.01);
+            color: orangered;
+            background-color: rgb(200, 200, 200);
+            border: 1px solid orangered;
+        }
+
+        .footer-section li,
+        h3 {
+            list-style: none;
+            margin: 2px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+        .footer-bottom {
+            /* background-color: #000000;
+            color: #ffffff; */
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div.btn-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        div.btn button {
+            width: 60px;
+            height: 50px;
+            border: none;
+            background: transparent;
+        }
+
+        div.btn a {
+            font-size: xx-large;
+        }
+
+
+        .featured-products {
+            border: 1px solid red;
+            margin: 2px 2px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 100%;
+            width: auto;
+
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .ft-cards-one {
+            border: 1px solid blue;
+            height: 270px;
+            width: 240px;
+
+            align-items: stretch;
+        }
+        .ft-cards-two {
+            border: 1px solid blue;
+            height: 300px;
+            width: 270px;
+        }
+        .ft-cards-three {
+            border: 1px solid blue;
+            height: 350px;
+            width: 300px;
+        }
+        .ft-cards-four {
+            border: 1px solid blue;
+            height: 300px;
+            width: 270px;
+        }
+        .ft-cards-five {
+            border: 1px solid blue;
+            height: 270px;
+            width: 240px;
+        }
+
+        .ft-name {
+            border: 1px solid green;
+            font-size: small;
+            padding: 2px;
+            text-align: center;
+            align-content: center;
+            align-items: flex-start;
+            max-height: 35px;
+        }
+
+        .ft-card-img img {
+            border: 1px solid white;
+            width: 100%;
+            height: 200px;
+        }
+
+        .ft-price {
+            border: 1px solid greenyellow;
+            font: large;
+            padding: 2px;
+            text-align: center;
+
+            /* align-content: flex-end; */
+            /* align-items: flex-end; */
+        }
+
+        span.ft-org-price {
+            color: gray;
+            text-decoration: line-through;
+        }
     </style>
 
 </head>
 
 <body>
-
     <section class="container">
 
+        <!-- navbar begins here -->
         <div class="navbar">
             <div class="logo">
                 <p>Tech-Shop</p>
@@ -158,20 +441,109 @@
 
         </div>
 
-        <div class="iframe">     
-                        
+        <!-- iframe for signup / login page  -->
+        <div class="iframe">
             <div id="signupModal"
-                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 2;">
-                <iframe src="./account/account.html" style="border: none; width: 100%; height: 100%;">
+                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 5;">
+                <iframe src="./re-design/account.html" style="border: none; width: 100%; height: 100%;">
                 </iframe>
             </div>
-        
+
             <script>
                 function showSignup() {
                     document.getElementById('signupModal').style.display = 'block';
                 }
             </script>
-            
+
+        </div>
+
+
+        <!-- 
+        <div class="corousel">
+            <div class="corousel-detail">
+                <p>
+                <h3>boat Airdopes 131 </h3>
+                <h2>Featherweight for <br>Comfort All-Day.</h2>
+                <h3>$1,099 &ThickSpace;<span class="original-price">$2,990</span></h3>
+                </p>
+            </div>
+            <div class="corousel-img">
+                <img src="\images\products\boat131-3.png" alt="picture">
+            </div>
+        </div>
+ -->
+
+        <div class="featured-products">
+            <div class="ft-cards-one">
+
+                <div class="ft-name">JBL Endurance Run Sports</div>
+
+                <div class="ft-card-img">
+                    <img src="./images/products/jbl-endu-1.png" alt="">
+                </div>
+
+                <div class="ft-price">
+                    <p>$999 &ThickSpace;<span class="ft-org-price">$1,599</span></p>
+                </div>
+
+            </div>
+            <div class="ft-cards-two">
+
+                <div class="ft-name">boAt Airdopes 203</div>
+
+                <div class="ft-card-img">
+                    <img src="./images/products/boat203-1.png" alt="">
+                </div>
+
+                <div class="ft-price">
+                    <p>$1,074 &ThickSpace;<span class="ft-org-price">$3,999</span></p>
+                </div>
+
+            </div>
+            <div class="ft-cards-three">
+
+                <div class="ft-name">boAt Rockerz 518</div>
+
+                <div class="ft-card-img">
+                    <img src="./images/products/boat518-1.png" alt="">
+                </div>
+
+                <div class="ft-price">
+                    <p>$1,299 &ThickSpace;<span class="ft-org-price">$3,990</span></p>
+                </div>
+
+            </div>
+            <div class="ft-cards-four">
+
+                <div class="ft-name">JBL Tune 760NC</div>
+
+                <div class="ft-card-img">
+                    <img src="./images/products/jbl760nc-1.png" alt="">
+                </div>
+
+                <div class="ft-price">
+                    <p>$5,999 &ThickSpace;<span class="ft-org-price">$7,999</span></p>
+                </div>
+
+            </div>
+            <div class="ft-cards-five">
+
+                <div class="ft-name">boAt Rockerz 255</div>
+
+                <div class="ft-card-img">
+                    <img src="./images/products/boat255r-1.png" alt="">
+                </div>
+
+                <div class="ft-price">
+                    <p>$899 &ThickSpace;<span class="ft-org-price">$2,990</span></p>
+                </div>
+
+            </div>
+
+
+
+
+
         </div>
 
 
@@ -182,6 +554,208 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="featured-products"> -->
+        <!-- <div class="featured-cards">
+                <div class="item-name">
+                    JBL Endurance Run Sports
+                </div>
+
+                <figure class="ft-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRdzbV0AmLfbuFSCrtK46uLAtymDpKbLn8g&s" alt="card-item-1" class="ft-card-img-1">
+                </figure>
+
+                <p class="discount-price">$999 &ThickSpace;<span class="original-price">$1,599</span></p>
+
+            </div> -->
+        <!--                
+                <figure class="card-body">
+                    <img src="\images\products\boat203-1.png" alt="card-item-2">
+                    <figcaption>boAt airdopes 203</figcaption>
+                    <p>
+                    <h3>$1,074 &ThickSpace;<span class="original-price">$3,999</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\boat518-1.png" alt="card-item-3">
+                    <figcaption>boAt Rockerz 518</figcaption>
+                    <p>
+                    <h3>$1,299 &ThickSpace;<span class="original-price">$3,990</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\jbl760nc-1.png" alt="card-item-4">
+                    <figcaption>JBL Tune 760NC</figcaption>
+                    <p>
+                    <h3>$5,999 &ThickSpace;<span class="original-price">$7,999</span></h3>
+                    </p>
+                </figure>
+                <figure class="card-body">
+                    <img src="\images\products\boat255r-1.png" alt="card-item-5">
+                    <figcaption>boAt Rockerz 255</figcaption>
+                    <p>
+                    <h3>$899 &ThickSpace;<span class="original-price">$2,990</span></h3>
+                    </p>
+                </figure>
+ 
+            </div>
+        -->
+        <!-- </div> -->
+
+
+        <!-- 
+        <div class="top-products">
+
+        </div>
+ -->
+
+
+
+
+        <!-- advantage box -->
+        <div class="advantage-box">
+
+            <div class="heading">
+                Our Advantages
+            </div>
+
+            <div class="adv-grid">
+
+                <div class="adv-cards">
+                    <div class="item1">
+                        <ion-icon name="rocket"></ion-icon>
+                    </div>
+                    <div class="item2">
+                        <h3>Express Delivery</h3>
+                    </div>
+                    <div class="item3">
+                        <p>Ships in 24 Hours</p>
+                    </div>
+                </div>
+                <div class="adv-cards">
+                    <div class="item1">
+                        <ion-icon name="shield-half"></ion-icon>
+                    </div>
+                    <div class="item2">
+                        <h3>Brand Warranty</h3>
+                    </div>
+                    <div class="item3">
+                        <p>100% Original Products</p>
+                    </div>
+                </div>
+                <div class="adv-cards">
+                    <div class="item1">
+                        <ion-icon name="pricetags"></ion-icon>
+                    </div>
+                    <div class="item2">
+                        <h3>Exciting Deals</h3>
+                    </div>
+                    <div class="item3">
+                        <p>On All Prepaid Orders</p>
+                    </div>
+                </div>
+                <div class="adv-cards">
+                    <div class="item1">
+                        <ion-icon name="card"></ion-icon>
+                    </div>
+                    <div class="item2">
+                        <h3>Secure Payments</h3>
+                    </div>
+                    <div class="item3">
+                        <p>SSL/Secure Certificate</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- footer begins here -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section form">
+                    <h3>Tech-Shop</h3>
+                    <p>Subscribe to our email alerts to receive early discount offers, and new products info.</p>
+                    <input type="email" placeholder="Email Address*">
+                    <button type="submit">Subscribe</button>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Cancel Order</a></li>
+                        <li><a href="#">Return Order</a></li>
+                        <li><a href="#">Warranty Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Policies</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Service Centres</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>2024 | All Rights Reserved. Built by | MANISH KUMAR</p>
+                </div>
+
+                <div class="btn btn-group">
+                    <button class="fb-btn">
+                        <a href="https://www.facebook.com/login/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    </button>
+
+                    <button class="twitter-btn">
+                        <a href="https://x.com/i/flow/login"><ion-icon name="logo-twitter"></ion-icon></a>
+                    </button>
+
+                    <button class="insta-btn">
+                        <a href="https://www.instagram.com/accounts/login/?hl=en"><ion-icon
+                                name="logo-instagram"></ion-icon></a>
+                    </button>
+
+                    <button class="git-btn">
+                        <a href="https://www.linkedin.com/login"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </button>
+                </div>
+            </div>
+        </div>
 
     </section>
 

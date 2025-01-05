@@ -61,6 +61,7 @@ div.navbar {
   cursor: pointer;
 }
 
+/* corousel design */
 .corousel {
   padding: 2px;
   width: 100%;
@@ -92,6 +93,7 @@ div.navbar {
   height: 350px;
 }
 
+/* featured products */
 .featured-cards {
   border: 1px solid red;
   display: flex;
