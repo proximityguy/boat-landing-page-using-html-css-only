@@ -1,3 +1,6 @@
+
+hello
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,6 +126,85 @@
             z-index: 2;
 
         }
+
+        span.original-price {
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        /* featured products */
+
+        .featured-products {
+            border: 1px solid red;
+            margin: 2px 2px;
+            padding: 10px;
+
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+
+            height: max-content;
+            width: 100%;
+
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+
+        .ft-cards-one,
+        .ft-cards-five {
+            height: 300px;
+            width: 200px;
+
+            position: relative;
+            top: 40px;
+        }
+
+        .ft-cards-two,
+        .ft-cards-four {
+            height: 350px;
+            width: 250px;
+            position: relative;
+            top: 20px;
+
+        }
+
+        .ft-cards-three {
+            height: 400px;
+            width: 300px;
+
+            position: relative;
+
+        }
+
+        .ft-cards-one:hover, .ft-cards-two:hover, .ft-cards-three:hover, .ft-cards-four:hover, .ft-cards-five:hover {
+            transform: scale(1.1);
+        }
+
+        div .ft-name {
+            font-size: small;
+            padding: 2px;
+            margin: 10px;
+            text-align: center;
+            max-height: 35px;
+
+        }
+
+        div.ft-card-img img {
+            width: 100%;
+        }
+
+        .discount-price {
+            font-size: large;
+            padding: 2px;
+            margin: 10px;
+            text-align: center;
+            max-height: 35px;
+            text-wrap: nowrap;
+        }
+
+        
+
 
         /* advantage box */
 
@@ -322,78 +404,26 @@
         }
 
 
-        .featured-products {
-            border: 1px solid red;
-            margin: 2px 2px;
-            padding: 10px;
+        /* corousel design */
+
+        .corousel {
+            border: 2px solid blue;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            height: 100%;
-            width: auto;
-
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .ft-cards-one {
-            border: 1px solid blue;
-            height: 270px;
-            width: 240px;
-
-            align-items: stretch;
-        }
-        .ft-cards-two {
-            border: 1px solid blue;
-            height: 300px;
-            width: 270px;
-        }
-        .ft-cards-three {
-            border: 1px solid blue;
-            height: 350px;
-            width: 300px;
-        }
-        .ft-cards-four {
-            border: 1px solid blue;
-            height: 300px;
-            width: 270px;
-        }
-        .ft-cards-five {
-            border: 1px solid blue;
-            height: 270px;
-            width: 240px;
-        }
-
-        .ft-name {
-            border: 1px solid green;
-            font-size: small;
-            padding: 2px;
-            text-align: center;
-            align-content: center;
-            align-items: flex-start;
-            max-height: 35px;
-        }
-
-        .ft-card-img img {
-            border: 1px solid white;
             width: 100%;
-            height: 200px;
+            height: 400px;
+
+            justify-content: space-evenly;
         }
 
-        .ft-price {
-            border: 1px solid greenyellow;
-            font: large;
-            padding: 2px;
-            text-align: center;
-
-            /* align-content: flex-end; */
-            /* align-items: flex-end; */
+        div.corousel-img img {
+            border: 1px solid green;
+            width: 100%;
+            height: 100%;
         }
 
-        span.ft-org-price {
-            color: gray;
-            text-decoration: line-through;
-        }
+
+
     </style>
 
 </head>
@@ -458,20 +488,29 @@
         </div>
 
 
-        <!-- 
+        <!-- corousel image -->
         <div class="corousel">
             <div class="corousel-detail">
+
                 <p>
                 <h3>boat Airdopes 131 </h3>
                 <h2>Featherweight for <br>Comfort All-Day.</h2>
                 <h3>$1,099 &ThickSpace;<span class="original-price">$2,990</span></h3>
                 </p>
             </div>
+
             <div class="corousel-img">
-                <img src="\images\products\boat131-3.png" alt="picture">
+                <img src="\images\products\boat131-3.png" alt="picture" class="courosel-img">
             </div>
         </div>
- -->
+
+
+        <!-- featured products -->
+
+        <div
+            style="display: block; text-align: center; margin: 10px; padding: 5px; border: 1px solid red;">
+            <h2>Featured Products</h2>
+        </div>
 
         <div class="featured-products">
             <div class="ft-cards-one">
@@ -479,11 +518,11 @@
                 <div class="ft-name">JBL Endurance Run Sports</div>
 
                 <div class="ft-card-img">
-                    <img src="./images/products/jbl-endu-1.png" alt="">
+                    <img src="./images/products/jbl-endu-1.png" alt="" class="ft-card-img">
                 </div>
 
-                <div class="ft-price">
-                    <p>$999 &ThickSpace;<span class="ft-org-price">$1,599</span></p>
+                <div class="discount-price">
+                    <p>$999 &ThickSpace;<span class="original-price">$1,599</span></p>
                 </div>
 
             </div>
@@ -492,11 +531,11 @@
                 <div class="ft-name">boAt Airdopes 203</div>
 
                 <div class="ft-card-img">
-                    <img src="./images/products/boat203-1.png" alt="">
+                    <img src="./images/products/boat203-1.png" alt="" class="ft-card-img">
                 </div>
 
-                <div class="ft-price">
-                    <p>$1,074 &ThickSpace;<span class="ft-org-price">$3,999</span></p>
+                <div class="discount-price">
+                    <p>$1,074 &ThickSpace;<span class="original-price">$3,999</span></p>
                 </div>
 
             </div>
@@ -505,11 +544,11 @@
                 <div class="ft-name">boAt Rockerz 518</div>
 
                 <div class="ft-card-img">
-                    <img src="./images/products/boat518-1.png" alt="">
+                    <img src="./images/products/boat518-1.png" alt="" class="original-price">
                 </div>
 
-                <div class="ft-price">
-                    <p>$1,299 &ThickSpace;<span class="ft-org-price">$3,990</span></p>
+                <div class="discount-price">
+                    <p>$1,299 &ThickSpace;<span class="original-price">$3,990</span></p>
                 </div>
 
             </div>
@@ -518,11 +557,11 @@
                 <div class="ft-name">JBL Tune 760NC</div>
 
                 <div class="ft-card-img">
-                    <img src="./images/products/jbl760nc-1.png" alt="">
+                    <img src="./images/products/jbl760nc-1.png" alt="" class="ft-card-img">
                 </div>
 
-                <div class="ft-price">
-                    <p>$5,999 &ThickSpace;<span class="ft-org-price">$7,999</span></p>
+                <div class="discount-price">
+                    <p>$5,999 &ThickSpace;<span class="original-price">$7,999</span></p>
                 </div>
 
             </div>
@@ -531,11 +570,11 @@
                 <div class="ft-name">boAt Rockerz 255</div>
 
                 <div class="ft-card-img">
-                    <img src="./images/products/boat255r-1.png" alt="">
+                    <img src="./images/products/boat255r-1.png" alt="" class="ft-card-img">
                 </div>
 
-                <div class="ft-price">
-                    <p>$899 &ThickSpace;<span class="ft-org-price">$2,990</span></p>
+                <div class="discount-price">
+                    <p>$899 &ThickSpace;<span class="original-price">$2,990</span></p>
                 </div>
 
             </div>
@@ -573,59 +612,6 @@
 
 
 
-        <!-- <div class="featured-products"> -->
-        <!-- <div class="featured-cards">
-                <div class="item-name">
-                    JBL Endurance Run Sports
-                </div>
-
-                <figure class="ft-card-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRdzbV0AmLfbuFSCrtK46uLAtymDpKbLn8g&s" alt="card-item-1" class="ft-card-img-1">
-                </figure>
-
-                <p class="discount-price">$999 &ThickSpace;<span class="original-price">$1,599</span></p>
-
-            </div> -->
-        <!--                
-                <figure class="card-body">
-                    <img src="\images\products\boat203-1.png" alt="card-item-2">
-                    <figcaption>boAt airdopes 203</figcaption>
-                    <p>
-                    <h3>$1,074 &ThickSpace;<span class="original-price">$3,999</span></h3>
-                    </p>
-                </figure>
-                <figure class="card-body">
-                    <img src="\images\products\boat518-1.png" alt="card-item-3">
-                    <figcaption>boAt Rockerz 518</figcaption>
-                    <p>
-                    <h3>$1,299 &ThickSpace;<span class="original-price">$3,990</span></h3>
-                    </p>
-                </figure>
-                <figure class="card-body">
-                    <img src="\images\products\jbl760nc-1.png" alt="card-item-4">
-                    <figcaption>JBL Tune 760NC</figcaption>
-                    <p>
-                    <h3>$5,999 &ThickSpace;<span class="original-price">$7,999</span></h3>
-                    </p>
-                </figure>
-                <figure class="card-body">
-                    <img src="\images\products\boat255r-1.png" alt="card-item-5">
-                    <figcaption>boAt Rockerz 255</figcaption>
-                    <p>
-                    <h3>$899 &ThickSpace;<span class="original-price">$2,990</span></h3>
-                    </p>
-                </figure>
- 
-            </div>
-        -->
-        <!-- </div> -->
-
-
-        <!-- 
-        <div class="top-products">
-
-        </div>
- -->
 
 
 
