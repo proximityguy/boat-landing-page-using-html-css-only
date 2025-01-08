@@ -464,6 +464,51 @@
         div.btn a {
             font-size: xx-large;
         }
+
+
+        .top-products {
+            display: block;
+            border: 1px solid red;
+        }
+
+        .pro-category {
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            margin: 10px;
+            padding: 20px;
+            gap: 5px;
+
+            /* align-items: center; */
+        }
+
+        .pro-category div {
+            border: 1px solid blueviolet;
+            /* align-items: center; */
+        }
+
+        .top-pro-grid {
+            border: 1px solid greenyellow;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            margin: 10px;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        div .top-pro-tabs
+
+        .card {
+            border: 1px solid blue;
+            display: block;
+        }
+
+        .image {
+            width: 200px;
+            height: 200px;
+        }
     </style>
 
 </head>
@@ -498,7 +543,8 @@
                     <div class="popup">
                         <h4>Hello!</h4>
                         <p>Access account and manage orders</p>
-                        <button class="login-popup-btn" onclick="showSignup()">Login / Signup</button>
+                        <button class="login-popup-btn">Login / Signup</button>
+                        <!-- onclick="showSignup()" -- it can be added inside the button-->
                         <hr>
                         <p>Please Login</p>
                     </div>
@@ -520,16 +566,22 @@
             </div>
 
             <script>
+                document.querySelector('.login-popup-btn').addEventListener('click', function () {
+                    document.getElementById('signupModal').style.display = 'block';
+                });
+            </script>
+
+            <!-- <script>
                 function showSignup() {
                     document.getElementById('signupModal').style.display = 'block';
                 }
-            </script>
+            </script> -->
 
         </div>
 
 
         <!-- corousel image -->
-        <div class="corousel">
+        <!-- <div class="corousel">
             <div class="corousel-detail">
 
                 <div class="cors-detail">
@@ -544,7 +596,7 @@
             <div class="corousel-img">
                 <img src="\images\products\boat131-3.png" alt="picture" class="courosel-img">
             </div>
-        </div>
+        </div> -->
 
 
         <!-- featured products -->
@@ -553,7 +605,7 @@
             <h2>Featured Products</h2>
         </div>
 
-        <div class="featured-products">
+        <!-- <div class="featured-products">
             <div class="ft-cards-one">
 
                 <div class="ft-name">JBL Endurance Run Sports</div>
@@ -624,14 +676,82 @@
 
 
 
+        </div> -->
+
+
+
+        <!-- top products begins here -->
+
+
+        <div class="top-products">
+
+            <div style=" border: 1px solid green; block; text-align: center; margin: 20px 10px; padding: 5px;">
+                <h2>Top Products</h2>
+            </div>
+
+            <div class="pro-category">
+
+                <div class="top-pro-tabs">All</div>
+                <div class="top-pro-tabs">Headphones</div>
+                <div class="top-pro-tabs">Earbuds</div>
+                <div class="top-pro-tabs">Earphones</div>
+                <div class="top-pro-tabs">Neckbands</div>
+
+            </div>
+
+            <div class="top-pro-grid">
+                <div class="card">
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="discount-price">
+                            <p>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></p>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+                <div class="card">card</div>
+
+            </div>
+
+
+
+
         </div>
-
-
-
-<!-- top products begins here -->
-
-
-
 
 
 
