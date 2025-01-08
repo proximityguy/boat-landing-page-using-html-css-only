@@ -490,24 +490,98 @@
 
         .top-pro-grid {
             border: 1px solid greenyellow;
+            margin: 10px 10px;
+            padding: 20px;
+            gap: 10px;
+
+            /* width: 100%; */
             display: grid;
             grid-template-columns: repeat(4, 1fr);
 
+            /* grid-auto-flow: column;
+            grid-auto-columns: 300px 300px; */
+
+        }
+
+        @media (max-width: 1024px) {
+            .top-pro-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-pro-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        
+
+
+        div.pro-category {
+            display: flex;
+            flex-direction: row;
             margin: 10px;
-            padding: 20px;
+            padding: 10px;
+            justify-content: center;
             gap: 10px;
         }
 
-        div .top-pro-tabs
+
+        div .top-pro-tabs {
+            text-align: center;
+            width: 120px;
+        }
 
         .card {
             border: 1px solid blue;
             display: block;
+            margin: 10px;
+            padding: 10px 20px;
         }
 
-        .image {
-            width: 200px;
-            height: 200px;
+
+
+        .card div {
+            border: 1px solid greenyellow;
+
+            margin: 5px;
+            padding: 5px;
+
+            text-align: left;
+        }
+
+
+        .image img {
+            border: 1px solid red;
+            width: 100%;
+            height: auto;
+            padding: 10px 5px;
+
+        }
+
+        .rate ion-icon {
+            color: red;
+        }
+
+        div .product-name {
+            text-wrap: nowrap;
+        }
+
+        div.add-cart button {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: #ffffff;
+
+
+        }
+
+        div.add-cart button:hover {
+            background-color: #ffffff;
+            color: #ff0000;
         }
     </style>
 
@@ -700,7 +774,10 @@
             </div>
 
             <div class="top-pro-grid">
+
+                <!-- card - 1 - one -->
                 <div class="card">
+
                     <div class="image">
                         <img src="./images/products/jbl660nc-1.png" alt="" class="image">
                     </div>
@@ -713,6 +790,7 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                         </div>
+
                         <div>
                             <h2 class="product-name">JBL Live 660NC</h2>
 
@@ -724,27 +802,458 @@
 
                         <hr>
 
-                        <div class="discount-price">
-                            <p>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></p>
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
                         </div>
 
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">Add to Cart</button>
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
                     </div>
                 </div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
-                <div class="card">card</div>
+
+                <!-- card - 2 - two -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 3 - three -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 4 - four -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 5 - five -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 6 - six -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 7 - seven -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 8 - eight -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 9 - nine -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 10 - ten -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 11 - eleven -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- card - 12 - twelve -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                    </div>
+
+                    <div class="card-details">
+                        <div class="rate">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h2 class="product-name">JBL Live 660NC</h2>
+
+                            <p class="product-info">
+                                wireless Over-Ear NC Headphones
+                            </p>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="disc-price">
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="add-cart">
+                        <button class="add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </div>
+                </div>
 
             </div>
 
