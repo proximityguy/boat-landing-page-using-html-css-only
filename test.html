@@ -16,13 +16,14 @@
             margin: 0%;
             padding: 0%;
             box-sizing: border-box;
+            /* border: 1px solid greenyellow; */
         }
 
         .container {
             background: #000000;
             color: #ffffff;
             font-family: "Roboto", serif;
-            margin: 2px 2px 10px 2px;
+            margin: 2px;
             display: flex;
             flex-direction: column;
         }
@@ -134,21 +135,21 @@
         /* corousel design */
 
         .corousel {
+            margin: 5px 10px;
+            padding: 10px 20px;
             display: flex;
             flex-direction: row;
-            width: 100%;
-            height: 630px;
+            height: fit-content;
             justify-content: space-evenly;
+            align-content: center;
+            align-items: center;
         }
 
         .corousel-detail {
             display: block;
-            width: 630px;
+            width: fit-content;
             padding: 10px;
-            position: absolute;
-            left: 180px;
-            top: 200px;
-            right: 0;
+            align-content: center;
         }
 
         .cors-detail {
@@ -183,31 +184,58 @@
             height: 50px;
         }
 
-        div.corousel-img img {
-            width: fit-content;
+        .corousel-img img {
+            width: 100%;
             height: 630px;
-            position: absolute;
         }
+
+        @media (max-width: 1080px) {
+            .corousel-img img {
+                height: 540px;
+            }
+        }
+        @media (max-width: 768px) {
+            .corousel-img img {
+                height: 360px;
+            }
+
+            .corousel-detail h1, h3, button{
+                font-size: calc(100% - 10%);
+            }
+        }
+
+        
 
 
         /* featured products */
 
         .featured-products {
-            border: 1px solid red;
             margin: 2px 5px;
             padding: 10px;
-
             gap: 10px;
-            display: flex;
-            flex-direction: row;
-
-            /* height: auto;
-            width: auto; */
-
-            justify-content: space-between;
-            align-content: space-between;
-
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
         }
+
+        @media (max-width: 1440px) {
+            .featured-products {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .featured-products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .featured-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
 
         .ft-cards-one,
         .ft-cards-five {
@@ -222,6 +250,7 @@
         .ft-cards-four {
             height: 350px;
             width: 250px;
+
             position: relative;
             top: 20px;
 
@@ -256,6 +285,8 @@
             width: 100%;
         }
 
+
+        /* common design in featured products and top products */
         .discount-price {
             font-size: large;
             padding: 2px;
@@ -263,6 +294,141 @@
             text-align: center;
             max-height: 35px;
             text-wrap: nowrap;
+        }
+
+        .pro-heading {
+            display: block;
+            text-align: center;
+            margin: 20px 10px;
+            padding: 5px;
+        }
+
+
+        /* top products */
+
+        .top-products {
+            display: block;
+        }
+
+        .pro-category {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin: 10px;
+            padding: 20px;
+            gap: 5px;
+        }
+
+
+        .top-pro-grid {
+            margin: 10px 10px;
+            padding: 20px;
+            gap: 10px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            /* grid-auto-flow: column;
+            grid-auto-columns: 300px 300px; */
+
+        }
+
+        @media (max-width: 1024px) {
+            .top-pro-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-pro-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        div.pro-category {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        div .top-pro-tabs {
+            text-align: center;
+            line-height: 35px;
+            width: 120px;
+            height: 35px;
+
+            border-radius: 5px;
+        }
+
+        div .top-pro-tabs:first-child {
+            background-color: red;
+        }
+
+        div .top-pro-tabs:hover {
+            background-color: red;
+        }
+
+        .card {
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            text-align: left;
+            justify-content: space-around;
+        }
+
+        .image img {
+            width: 100%;
+            height: max-content;
+            background-color: rgb(41, 41, 41);
+        }
+
+
+        .card-details {
+            margin: 10px 10px;
+        }
+
+
+        .rate ion-icon {
+            color: red;
+        }
+
+        div .product-name {
+            text-wrap: nowrap;
+        }
+
+        div.add-cart button {
+            width: 94%;
+            height: 40px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 10px;
+        }
+
+
+        div.add-cart button:hover {
+            background-color: #ff0000;
+            color: #0dff00;
+            transform: scale(1.02);
+        }
+
+        .card .card-twelve {
+            font-size: 40px;
+            margin: 5px;
+            margin-left: 15%;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .card-twelve:hover {
+            transform: scale(1.01);
+            text-decoration: underline;
         }
 
 
@@ -291,36 +457,48 @@
             column-gap: 10px;
         }
 
+        @media (max-width: 1024px) {
+            .adv-grid {
+                grid-template-columns: auto auto;
+                gap: 10px;
+            }
+        }
+
         .adv-cards {
             display: grid;
             grid-template-columns: auto auto auto;
-            gap: 0px;
+            column-gap: 10px;
 
             padding: 2px;
             background: #000000;
             color: #ffffff;
             width: 100%;
+
+            text-wrap: nowrap;
+            justify-content: center;
         }
 
-        .adv-cards>div>ion-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0;
+
+
+        .adv-cards ion-icon {
+            font-size: 60px;
             color: red;
-            margin-left: 20px;
+            margin-top: 10px;
         }
 
-        .adv-cards>div>h3 {
+        .adv-cards h3 {
             text-align: left;
             font-size: 15px;
             margin-left: 10px;
+            margin-top: 5px;
             width: fit-content;
         }
 
-        .adv-cards>div>p {
+        .adv-cards p {
             text-align: left;
             font-size: 10px;
             margin-left: 10px;
+            margin-bottom: 5px;
             width: fit-content;
         }
 
@@ -435,8 +613,6 @@
         }
 
         .footer-bottom {
-            /* background-color: #000000;
-            color: #ffffff; */
             padding-left: 10px;
             padding-right: 10px;
             line-height: 30px;
@@ -463,125 +639,6 @@
 
         div.btn a {
             font-size: xx-large;
-        }
-
-
-        .top-products {
-            display: block;
-            border: 1px solid red;
-        }
-
-        .pro-category {
-            border: 1px solid red;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-
-            margin: 10px;
-            padding: 20px;
-            gap: 5px;
-
-            /* align-items: center; */
-        }
-
-        .pro-category div {
-            border: 1px solid blueviolet;
-            /* align-items: center; */
-        }
-
-        .top-pro-grid {
-            border: 1px solid greenyellow;
-            margin: 10px 10px;
-            padding: 20px;
-            gap: 10px;
-
-            /* width: 100%; */
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-            /* grid-auto-flow: column;
-            grid-auto-columns: 300px 300px; */
-
-        }
-
-        @media (max-width: 1024px) {
-            .top-pro-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .top-pro-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-
-        
-
-
-        div.pro-category {
-            display: flex;
-            flex-direction: row;
-            margin: 10px;
-            padding: 10px;
-            justify-content: center;
-            gap: 10px;
-        }
-
-
-        div .top-pro-tabs {
-            text-align: center;
-            width: 120px;
-        }
-
-        .card {
-            border: 1px solid blue;
-            display: block;
-            margin: 10px;
-            padding: 10px 20px;
-        }
-
-
-
-        .card div {
-            border: 1px solid greenyellow;
-
-            margin: 5px;
-            padding: 5px;
-
-            text-align: left;
-        }
-
-
-        .image img {
-            border: 1px solid red;
-            width: 100%;
-            height: auto;
-            padding: 10px 5px;
-
-        }
-
-        .rate ion-icon {
-            color: red;
-        }
-
-        div .product-name {
-            text-wrap: nowrap;
-        }
-
-        div.add-cart button {
-            width: 100%;
-            height: 40px;
-            border-radius: 5px;
-            background-color: #ff0000;
-            color: #ffffff;
-
-
-        }
-
-        div.add-cart button:hover {
-            background-color: #ffffff;
-            color: #ff0000;
         }
     </style>
 
@@ -655,7 +712,7 @@
 
 
         <!-- corousel image -->
-        <!-- <div class="corousel">
+        <div class="corousel">
             <div class="corousel-detail">
 
                 <div class="cors-detail">
@@ -668,18 +725,19 @@
             </div>
 
             <div class="corousel-img">
-                <img src="\images\products\boat131-3.png" alt="picture" class="courosel-img">
+                <img src="\images\products\boat131-3.png" alt="picture">
             </div>
-        </div> -->
+        </div>
 
 
         <!-- featured products -->
 
-        <div style="display: block; text-align: center; margin: 20px 10px; padding: 5px;">
+        <div class="pro-heading">
             <h2>Featured Products</h2>
         </div>
 
-        <!-- <div class="featured-products">
+
+        <div class="featured-products">
             <div class="ft-cards-one">
 
                 <div class="ft-name">JBL Endurance Run Sports</div>
@@ -693,6 +751,7 @@
                 </div>
 
             </div>
+
             <div class="ft-cards-two">
 
                 <div class="ft-name">boAt Airdopes 203</div>
@@ -750,7 +809,7 @@
 
 
 
-        </div> -->
+        </div>
 
 
 
@@ -759,7 +818,7 @@
 
         <div class="top-products">
 
-            <div style=" border: 1px solid green; block; text-align: center; margin: 20px 10px; padding: 5px;">
+            <div class="pro-heading">
                 <h2>Top Products</h2>
             </div>
 
@@ -803,7 +862,7 @@
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 9,999 &ThickSpace;<span class="original-price">₹ 14,999</span></h3>
                         </div>
 
                     </div>
@@ -819,7 +878,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/boat518-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -832,10 +891,10 @@
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">boAt Rockerz 518</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
+                                On-Ear wireless Headphones
                             </p>
                         </div>
 
@@ -843,7 +902,7 @@
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 1,299 &ThickSpace;<span class="original-price">₹ 3,290</span></h3>
                         </div>
 
                     </div>
@@ -859,7 +918,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/boat131-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -872,10 +931,10 @@
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">boAt Airdopes 131</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
+                                wireless In-Ear Earbuds
                             </p>
                         </div>
 
@@ -883,7 +942,7 @@
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 1,099 &ThickSpace;<span class="original-price">₹ 2,990</span></h3>
                         </div>
 
                     </div>
@@ -899,7 +958,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/boat110-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -908,14 +967,13 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">boAt BassHeads 110</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
+                                In-Ear Wired Earphones
                             </p>
                         </div>
 
@@ -923,7 +981,7 @@
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 449 &ThickSpace;<span class="original-price">₹ 999</span></h3>
                         </div>
 
                     </div>
@@ -939,7 +997,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/boat410-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -952,18 +1010,18 @@
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">boAt Rockerz 410</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
+                                Bluetooth & Wired On-Ear
+                                Headp hones </p>
                         </div>
 
 
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 1,599 &ThickSpace;<span class="original-price">₹ 2,990</span></h3>
                         </div>
 
                     </div>
@@ -979,7 +1037,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/jbl200bt-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -988,22 +1046,20 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">JBL Live 200BT</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
+                                In-Ear Wireless Neckbands </p>
                         </div>
 
 
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 3,699 &ThickSpace;<span class="original-price">₹ 5,299</span></h3>
                         </div>
 
                     </div>
@@ -1019,7 +1075,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/sonyXb910n-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -1028,22 +1084,21 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">Sony WH-XB910N</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
+                                Wireless Over-Ear
+                                Head phones </p>
                         </div>
 
 
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 13,489 &ThickSpace;<span class="original-price">₹ 19,990</span></h3>
                         </div>
 
                     </div>
@@ -1059,7 +1114,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/jbl760nc-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -1068,22 +1123,21 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">JBL Tune 760NC</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
+                                Wireless Over-Ear NC
+                                Headphones </p>
                         </div>
 
 
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 5,999 &ThickSpace;<span class="original-price">₹ 7,999</span></h3>
                         </div>
 
                     </div>
@@ -1099,7 +1153,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/boat255r-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -1112,18 +1166,17 @@
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">boAt Rockerz 255</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
+                                In-Ear Wireless Neckbands </p>
                         </div>
 
 
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 2,990</span></h3>
                         </div>
 
                     </div>
@@ -1139,7 +1192,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/jbl100-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -1148,22 +1201,20 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">JBL Wave 100</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
+                                In-Ear Truly Wireless Earbuds </p>
                         </div>
 
 
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 2,999 &ThickSpace;<span class="original-price">₹ 6,999</span></h3>
                         </div>
 
                     </div>
@@ -1179,7 +1230,7 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
+                        <img src="./images/products/sony1000xm4-1.png" alt="" class="image">
                     </div>
 
                     <div class="card-details">
@@ -1187,15 +1238,13 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
                         </div>
 
                         <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
+                            <h2 class="product-name">Sony WF-1000XM4C</h2>
 
                             <p class="product-info">
-                                wireless Over-Ear NC Headphones
+                                Wireless Over-Ear NC Headphones
                             </p>
                         </div>
 
@@ -1203,7 +1252,7 @@
                         <hr>
 
                         <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
+                            <h3>₹ 19,990 &ThickSpace;<span class="original-price">₹ 24,990</span></h3>
                         </div>
 
                     </div>
@@ -1218,40 +1267,11 @@
                 <!-- card - 12 - twelve -->
                 <div class="card">
 
-                    <div class="image">
-                        <img src="./images/products/jbl660nc-1.png" alt="" class="image">
-                    </div>
-
-                    <div class="card-details">
-                        <div class="rate">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                        </div>
-
-                        <div>
-                            <h2 class="product-name">JBL Live 660NC</h2>
-
-                            <p class="product-info">
-                                wireless Over-Ear NC Headphones
-                            </p>
-                        </div>
-
-
-                        <hr>
-
-                        <div class="disc-price">
-                            <h3>₹ 999 &ThickSpace;<span class="original-price">₹ 1,599</span></h3>
-                        </div>
-
-                    </div>
-
-                    <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                    <div class="card-twelve">
+                        <p>
+                            Browse All Products
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </p>
                     </div>
                 </div>
 
@@ -1261,29 +1281,6 @@
 
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <!-- advantage box -->
@@ -1354,8 +1351,10 @@
                 </div>
 
                 <div class="footer-section">
-                    <h3>Help</h3>
                     <ul>
+                        <li>
+                            <h3>Help</h3>
+                        </li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Track Order</a></li>
                         <li><a href="#">Cancel Order</a></li>
@@ -1365,8 +1364,10 @@
                 </div>
 
                 <div class="footer-section">
-                    <h3>Policies</h3>
                     <ul>
+                        <li>
+                            <h3>Policies</h3>
+                        </li>
                         <li><a href="#">Return Policy</a></li>
                         <li><a href="#">Security</a></li>
                         <li><a href="#">Sitemap</a></li>
@@ -1376,8 +1377,10 @@
                 </div>
 
                 <div class="footer-section">
-                    <h3>Company</h3>
                     <ul>
+                        <li>
+                            <h3>Company</h3>
+                        </li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Service Centres</a></li>
