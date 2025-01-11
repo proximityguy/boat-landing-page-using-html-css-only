@@ -40,6 +40,10 @@
             color: orangered;
         }
 
+        button {
+            cursor: pointer;
+        }
+
 
         /* navbar styles */
         .navbar {
@@ -60,7 +64,7 @@
             top: 0;
 
         }
-        
+
 
         div.btn-group {
             display: flex;
@@ -135,11 +139,67 @@
             text-decoration: line-through;
         }
 
-      
+        /* product specification, ovverview and review */
 
-        
+        .pro-specif {
+            border: 1px solid red;
+            display: block;
+        }
 
-       
+        div.pro-specif-category {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        div .top-pro-tabs {
+            text-align: center;
+            line-height: 35px;
+            width: 120px;
+            height: 35px;
+
+            border-radius: 5px;
+        }
+
+        div .top-pro-tabs:first-child {
+            background-color: red;
+
+        }
+
+        div .top-pro-tabs:hover {
+
+            background-color: red;
+            cursor: pointer;
+        }
+
+        table.specs {
+            margin: 10px;
+            margin-left: 50px;
+            padding: 5px;
+            border-spacing: 10px;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        tr> :first-child {
+            text-align: left;
+            width: 180px;
+        }
+
+        tr> :last-child {
+            text-align: right;
+            width: 180px;
+        }
+
+
+
+
+
 
 
         /* top products */
@@ -449,6 +509,118 @@
         div.btn a {
             font-size: xx-large;
         }
+
+
+        .product-data {
+            border: 1px solid blue;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+          
+        }
+
+
+        .grid-item-one {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .grid-item-two {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .grid-item-three {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+
+        @media (max-width: 768px) {
+            .product-data {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-item-one {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            .grid-item-two {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+
+            .grid-item-three {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+
+
+
+
+        .product-data>div img {
+            border: 1px solid greenyellow;
+            /* width: 200px; */
+            /* height: 200px; */
+        }
+
+        .product-gallery {
+            border: 1px solid green;
+            margin: 20px 20px;
+            width: fit-content;
+
+            
+        }
+
+        .product-gallery div {
+            border: 2px solid #ffffff;
+            width: fit-content;
+            height: fit-content;
+            display: block;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .product-gallery img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .product-feature-image {
+            border: 1px solid pink;
+            margin: 20px;
+            padding: 10px;
+            height: fit-content;
+            width: fit-content;
+
+        }
+
+        .product-feature-image img {
+            width: 500px;
+            height: 100%;
+        }
+
+        .product-detail {
+            border: 1px solid pink;
+            margin: 20px 10px;
+            width: fit-content;
+            height: fit-content;            
+        }
     </style>
 
 </head>
@@ -519,10 +691,120 @@
 
         </div>
 
+        <!-- product image gallery and details -->
 
-       
+        <div class="product-data">
+            <div class="product-gallery grid-item-one">
+                <div>
+                    <img src="/images/products/jbl660nc-1.png" alt="product-img-1">
+                </div>
+                <div>
+                    <img src="/images/products/jbl660nc-2.png" alt="product-img-2">
+                </div>
+                <div>
+                    <img src="/images/products/jbl660nc-3.png" alt="product-img-3">
+                </div>
+                <div>
+                    <img src="/images/products/jbl660nc-4.png" alt="product-img-4">
+                </div>
+            </div>
+
+            <div class="product-feature-image grid-item-two">
+                <img src="/images/products/jbl660nc-1.png" alt="product-feature-img">
+
+            </div>
+
+            <div class="product-detail grid-item-three">
+
+                <div>
+                    <h2 class="product-name">JBL Live 660NC</h2>
+
+                    <p class="product-info">
+                        Wireless Over-Ear NC Headphones
+                    </p>
+
+                </div>
+
+                <div class="rate">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+
+                    | 1234 Ratings
+                </div>
+
+                <hr>
+
+                <div class="disc-price">
+                    <h3>₹ 9,999 &ThickSpace;<span class="original-price">₹ 14,999</span></h3>
+                </div>
+
+                <p>You save: ₹5,000 (33%)
+                    <br>
+                    (Inclusive of all taxes)
+                </p>
+
+                <span class="stock-label">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                    In Stock
+                </span>
 
 
+            </div>
+        </div>
+
+        <!-- product specification, overview and review tabs -->
+
+        <div class="pro-specif">
+
+            <div class="pro-specif-category">
+
+                <div class="top-pro-tabs">Specifications</div>
+                <div class="top-pro-tabs">Overview</div>
+                <div class="top-pro-tabs">Review</div>
+
+            </div>
+
+            <div class="pro-specif">
+
+                <table class="specs">
+                    <tr>
+                        <td>Brand</td>
+                        <td></td>
+                        <td>JBL</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td></td>
+                        <td>JBL Live 660NC</td>
+                    </tr>
+                    <tr>
+                        <td>Generic Name</td>
+                        <td></td>
+                        <td>Headphones</td>
+                    </tr>
+                    <tr>
+                        <td>Headphone Type</td>
+                        <td></td>
+                        <td>Over Ear</td>
+                    </tr>
+                    <tr>
+                        <td>Connectivty</td>
+                        <td></td>
+                        <td>wireless</td>
+                    </tr>
+                    <tr>
+                        <td>Microphone</td>
+                        <td></td>
+                        <td>Yes</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
 
         <!-- top products begins here -->
 
@@ -653,7 +935,7 @@
                         </button>
                     </div>
                 </div>
- 
+
                 <!-- card - 4 - four -->
                 <div class="card">
 
