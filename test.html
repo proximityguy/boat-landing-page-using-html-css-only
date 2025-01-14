@@ -426,8 +426,9 @@
             margin-bottom: 10px;
         }
 
-        .footer-section input {
-            width: auto;
+        .footer-section form .subscribe {
+            width: 200px;
+            height: 50px;
             padding: 10px 10px;
             border-radius: 5px;
             margin-bottom: 15px;
@@ -436,11 +437,11 @@
             color: #ffffff;
         }
 
-        .footer-section input:placeholder-shown {
+        .footer-section form .subscribe:placeholder-shown {
             color: #ffffff;
         }
 
-        .footer-section input:hover {
+        .footer-section form .subscribe:hover {
             transform: scale(1.01);
             color: #000000;
             background-color: #ffffff;
@@ -448,15 +449,11 @@
             outline: none;
         }
 
-        .footer-section input:focus {
-            transform: scale(1.01);
-            color: #000000;
-            background-color: #ffffff;
-            border: none;
-            outline: none;
+        .footer-section form input {
+            display: block;
         }
 
-        .form button {
+        .form form .button {
             width: 200px;
             height: 50px;
             color: #ffffff;
@@ -466,12 +463,13 @@
             border-radius: 5px;
         }
 
-        .form button:hover {
+        .form form .button:hover {
             transform: scale(1.01);
             color: orangered;
             background-color: rgb(200, 200, 200);
             border: 1px solid orangered;
         }
+
 
         .footer-section li,
         h3 {
@@ -517,7 +515,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
 
-          
+
         }
 
 
@@ -619,7 +617,7 @@
             border: 1px solid pink;
             margin: 20px 10px;
             width: fit-content;
-            height: fit-content;            
+            height: fit-content;
         }
     </style>
 
@@ -671,8 +669,16 @@
 
         <!-- iframe for signup / login page  -->
         <div class="iframe">
-            <div id="signupModal"
-                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 5;">
+            <div id="signupModal" style="
+                display: none; 
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                background: transparent; 
+                position: fixed; 
+                z-index: 5;">
                 <iframe src="./re-design/account.html" style="border: none; width: 100%; height: 100%;">
                 </iframe>
             </div>
@@ -1043,8 +1049,10 @@
                 <div class="footer-section form">
                     <h3>Tech-Shop</h3>
                     <p>Subscribe to our email alerts to receive early discount offers, and new products info.</p>
-                    <input type="email" placeholder="Email Address*">
-                    <button type="submit">Subscribe</button>
+                    <form action="" method="post">
+                        <input type="email" class="subscribe" placeholder="Email Address*">
+                        <input type="reset" class="button" value="Subscribe">
+                    </form>
                 </div>
 
                 <div class="footer-section">

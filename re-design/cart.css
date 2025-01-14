@@ -1,78 +1,72 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    background: #000000;
-
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 .container {
-    background: #000000;
-    color: #ffffff;
-    font-family: "Roboto", serif;
-    margin: 2px;
-    display: flex;
-    flex-direction: column;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Roboto", serif;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
-    display: block;
-    font-size: 14px;
-    cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 a:hover {
-    color: orangered;
+  color: orangered;
 }
-
 
 /* navbar styles */
 .navbar {
-    background-color: #000000;
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: fit-content;
-    width: 100%;
+  background-color: #000000;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
 
-    position: sticky;
-    top: 0;
-
+  position: sticky;
+  top: 0;
 }
 
-
 div.btn-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 div.logo p {
-    width: fit-content;
-    height: 5opx;
-    font-size: large;
+  width: fit-content;
+  height: 5opx;
+  font-size: large;
 }
 
 div.btn button {
-    width: 40px;
-    height: 50px;
-    border: none;
-    background: transparent;
+  width: 40px;
+  height: 50px;
+  border: none;
+  background: transparent;
 }
 
 div.btn ion-icon {
-    font-size: x-large;
+  font-size: x-large;
 }
 /* navbar ends here */
 
@@ -112,14 +106,12 @@ p {
 .hide:hover .popup {
   display: block;
   z-index: 2;
-
 }
 
 span.original-price {
   color: gray;
   text-decoration: line-through;
 }
-
 
 /* cart box */
 
@@ -157,7 +149,6 @@ span.original-price {
   margin-right: 20px;
 }
 
-
 .item-name {
   font-size: 16px;
   margin: 0 0 10px;
@@ -188,7 +179,8 @@ span.original-price {
   border-radius: 2px;
 }
 
-.increase-btn:hover, .decrease-btn:hover{
+.increase-btn:hover,
+.decrease-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -221,7 +213,7 @@ span.original-price {
   border-radius: 2px;
 }
 
-.price-summary button:hover{
+.price-summary button:hover {
   transform: scale(1.01);
   color: orangered;
   background-color: rgb(200, 200, 200);
@@ -248,7 +240,6 @@ h6 hr {
 }
 
 .footer-content {
-
   width: auto;
   display: flex;
   flex-direction: row;
@@ -271,8 +262,9 @@ h6 hr {
   margin-bottom: 10px;
 }
 
-.footer-section input {
-  width: auto;
+.footer-section form .subscribe {
+  width: 200px;
+  height: 50px;
   padding: 10px 10px;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -281,11 +273,11 @@ h6 hr {
   color: #ffffff;
 }
 
-.footer-section input:placeholder-shown {
+.footer-section form .subscribe:placeholder-shown {
   color: #ffffff;
 }
 
-.footer-section input:hover {
+.footer-section form .subscribe:hover {
   transform: scale(1.01);
   color: #000000;
   background-color: #ffffff;
@@ -293,15 +285,11 @@ h6 hr {
   outline: none;
 }
 
-.footer-section input:focus {
-  transform: scale(1.01);
-  color: #000000;
-  background-color: #ffffff;
-  border: none;
-  outline: none;
+.footer-section form input {
+  display: block;
 }
 
-.form button {
+.form form .button {
   width: 200px;
   height: 50px;
   color: #ffffff;
@@ -311,7 +299,7 @@ h6 hr {
   border-radius: 5px;
 }
 
-.form button:hover {
+.form form .button:hover {
   transform: scale(1.01);
   color: orangered;
   background-color: rgb(200, 200, 200);

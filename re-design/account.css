@@ -5,8 +5,7 @@
 }
 
 body {
-  background-color: transparent;
-  font-family: "Roboto", serif;
+  background: transparent;
 }
 
 a {
@@ -16,6 +15,8 @@ a {
   font-size: 15px;
 }
 .container-signup-popup {
+  font-family: "Roboto", serif;
+
   background: #262626;
   color: white;
   max-width: 350px;
@@ -81,7 +82,6 @@ input.input {
   z-index: 2;
 }
 
-
 button.btn {
   display: inline-block;
   height: 40px;
@@ -142,5 +142,4 @@ button.twitter-btn {
   bottom: 111px;
   right: 125px;
   background-color: #262626;
-  
 }

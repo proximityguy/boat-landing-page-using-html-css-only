@@ -6,7 +6,7 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1">
 
     <title>Tech-Shop | home</title>
-    
+
     <link rel="stylesheet" href="homepage.css">
 
 </head>
@@ -41,7 +41,7 @@
                     <div class="popup">
                         <h4>Hello!</h4>
                         <p>Access account and manage orders</p>
-                        <button class="login-popup-btn">Login / Signup</button>
+                        <button class="login-popup-btn" onclick="showSignup();">Login / Signup</button>
                         <!-- onclick="showSignup()" -- it can be added inside the button-->
                         <hr>
                         <p>Please Login</p>
@@ -59,21 +59,15 @@
         <div class="iframe">
             <div id="signupModal"
                 style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 5;">
-                <iframe src="./re-design/account.html" style="border: none; width: 100%; height: 100%;">
+                <iframe src="account.html" style="border: none; width: 100%; height: 100%;">
                 </iframe>
             </div>
 
             <script>
-                document.querySelector('.login-popup-btn').addEventListener('click', function () {
-                    document.getElementById('signupModal').style.display = 'block';
-                });
-            </script>
-
-            <!-- <script>
                 function showSignup() {
                     document.getElementById('signupModal').style.display = 'block';
                 }
-            </script> -->
+            </script>
 
         </div>
 
@@ -171,7 +165,7 @@
                 </div>
 
             </div>
-            
+
         </div>
 
 
@@ -705,8 +699,10 @@
                 <div class="footer-section form">
                     <h3>Tech-Shop</h3>
                     <p>Subscribe to our email alerts to receive early discount offers, and new products info.</p>
-                    <input type="email" placeholder="Email Address*">
-                    <button type="submit">Subscribe</button>
+                    <form action="" method="post">
+                        <input type="email" class="subscribe" placeholder="Email Address*">
+                        <input type="reset" class="button" value="Subscribe">
+                    </form>
                 </div>
 
                 <div class="footer-section">
@@ -775,7 +771,7 @@
             </div>
         </div>
 
-        
+
     </section>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
