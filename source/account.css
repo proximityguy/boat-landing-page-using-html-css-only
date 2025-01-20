@@ -17,11 +17,11 @@ a {
 .container-signup-popup {
   font-family: "Roboto", serif;
 
-  background: #262626;
+  background: rgb(20, 20, 20);
   color: white;
   max-width: 350px;
   height: fit-content;
-  border: 1px solid rgb(109, 103, 103);
+  border: 1px solid rgb(20, 20, 20);
   margin: auto;
   margin-top: 50px;
   padding: 30px;
@@ -55,11 +55,14 @@ a {
 }
 
 .heading {
-  font-size: 15px;
+  font-size: 16px;
+  display: flex;
 }
 
-.btn {
-  font-size: 15px;
+.heading button.login-btn {
+  width: auto;
+  height: fit-content;
+  font-size: 18px;
 }
 
 .inputs {
@@ -72,6 +75,7 @@ a {
 input.input {
   display: block;
   border: 1px solid rgb(130, 124, 124);
+  background-color: #262626;
   font-size: 15px;
   width: 100%;
   height: 40px;
@@ -80,6 +84,10 @@ input.input {
   margin-bottom: 10px;
   position: relative;
   z-index: 2;
+}
+
+input.input {
+  color: white;
 }
 
 button.btn {
@@ -99,6 +107,7 @@ button.signup-btn {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 div.btn-group {
@@ -115,15 +124,18 @@ div.btn-group {
 button.fb-btn {
   width: 80px;
   background-color: #1a73e8;
+  border: none;
 }
 button.google-btn {
   width: 80px;
   background-color: #b3261e;
+  border: none;
 }
 
 button.twitter-btn {
   width: 80px;
   background-color: #1a73e8;
+  border: none;
 }
 .striped {
   height: 40px;
@@ -141,5 +153,5 @@ button.twitter-btn {
   position: absolute;
   bottom: 111px;
   right: 125px;
-  background-color: #262626;
+  background-color: rgb(20, 20, 20);
 }

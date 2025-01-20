@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech-Shop - login | signup</title>
+    <link rel="stylesheet" href="account.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="container-signup-popup">
+        <div class="top-content">
+
+            <button class="close-btn"
+                onclick="this.parentElement.parentElement.style.display = 'none'; window.parent.location.reload();">x</button>
+
+            <h2>Signup</h2>
+            <p class="heading">
+                Already have an account? &ThickSpace;
+                <a href="login.html">
+                    <button class="btn login-btn">Login</button>
+                </a>
+            </p>
+        </div>
+        <div>
+
+            <form action="" target="_self" autocomplete="off">
+                <div class="inputs">
+                    <input type="text" name="" id="userName" class="input" placeholder="Username">
+                    <input type="email" name="" id="email" class="input" placeholder="Email">
+                    <input type="password" name="" id="pswd" class="input" placeholder="Password">
+                    <input type="password" name="" id="cnf-pswd" class="input" placeholder="Confirm Password">
+
+
+                </div>
+                <div>
+                    <button class="btn signup-btn">Signup</button>
+                </div>
+
+            </form>
+
+            <div class="striped">
+                <hr>
+                <span class="striped-text">&ThinSpace;or signup with&ThickSpace;</span>
+            </div>
+
+
+            <div class="btn btn-group">
+                <button class="fb-btn">
+                    <a href="https://www.facebook.com/login/">Facebook</a>
+                </button>
+                <button class="google-btn">
+                    <a href="https://accounts.google.com/signin">Google</a>
+                </button>
+                <button class="twitter-btn">
+                    <a href="https://x.com/i/flow/login">Twitter</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/548c44d661.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@
         <!-- navbar begins here -->
         <div class="navbar">
             <div class="logo">
-                <p><a href="homepage.html">Tech-Shop</a></p>
+                <h1><a href="homepage.html">Tech-Shop</a></h1>
             </div>
 
             <div class="btn btn-group">
@@ -25,9 +25,10 @@
                         <a href=""><ion-icon name="search-outline"></ion-icon></a>
                     </button>
                 </div>
-                <div>
+                <div class="cart">
                     <button class="cart-btn">
                         <a href="cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+                        <span class="cart-value">4</span>
                     </button>
                 </div>
 
@@ -40,8 +41,8 @@
                         <h4>Hello!</h4>
                         <p>Access account and manage orders</p>
                         <button class="login-popup-btn" onclick="showSignup();
-                        ">Login /
-                            Signup</button>
+                        ">Login / Signup</button>
+
                         <hr>
                         <p>Please Login</p>
                     </div>
@@ -55,7 +56,7 @@
             <div id="signupModal"
                 style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 5;">
 
-                <iframe src="account.html" style="border: none; width: 100%; height: 100%;">
+                <iframe src="signup.html" style="border: none; width: 100%; height: 100%;">
                 </iframe>
             </div>
 

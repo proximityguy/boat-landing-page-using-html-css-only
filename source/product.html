@@ -19,7 +19,7 @@
         <!-- navbar begins here -->
         <div class="navbar">
             <div class="logo">
-                <p><a href="homepage.html">Tech-Shop</a></p>
+                <h1><a href="homepage.html">Tech-Shop</a></h1>
             </div>
 
             <div class="btn btn-group">
@@ -29,9 +29,10 @@
                         <a href=""><ion-icon name="search-outline"></ion-icon></a>
                     </button>
                 </div>
-                <div>
+                <div class="cart">
                     <button class="cart-btn">
                         <a href="cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+                        <span class="cart-value">4</span>
                     </button>
                 </div>
 
@@ -43,7 +44,7 @@
                     <div class="popup">
                         <h4>Hello!</h4>
                         <p>Access account and manage orders</p>
-                        <button class="login-popup-btn">Login / Signup</button>
+                        <button class="login-popup-btn" onclick="showSignup();">Login / Signup</button>
                         <hr>
                         <p>Please Login</p>
                     </div>
@@ -58,25 +59,18 @@
 
         <!-- iframe for signup / login page  -->
         <div class="iframe">
-            <div id="signupModal" style="
-                display: none; 
-                position: fixed; 
-                top: 0; 
-                left: 0; 
-                width: 100%; 
-                height: 100%; 
-                background: transparent; 
-                position: fixed; 
-                z-index: 5;">
-                <iframe src="account.html" style="border: none; width: 100%; height: 100%;">
+            <div id="signupModal">
+                <iframe src="signup.html" style="border: none; width: 100%; height: 100%;">
                 </iframe>
             </div>
 
             <script>
-                document.querySelector('.login-popup-btn').addEventListener('click', function () {
+                function showSignup() {
                     document.getElementById('signupModal').style.display = 'block';
-                });
+                }
             </script>
+
+
 
 
         </div>
@@ -157,9 +151,11 @@
                 <hr>
 
                 <div class="pro-add-cart">
-                    <button class="pro-add-cart">
-                        <h3>Add to Cart</h3>
-                    </button>
+                    <a href="cart.html">
+                        <button class="pro-add-cart">
+                            <h3>Add to Cart</h3>
+                        </button>
+                    </a>
                 </div>
 
 
@@ -232,7 +228,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/jbl660nc-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/jbl660nc-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -262,9 +260,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -272,7 +272,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat518-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat518-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -302,9 +304,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -312,7 +316,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat410-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat410-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -342,9 +348,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -352,7 +360,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/sonyXb910n-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/sonyXb910n-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -381,9 +391,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 

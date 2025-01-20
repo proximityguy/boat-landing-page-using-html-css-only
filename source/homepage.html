@@ -17,7 +17,7 @@
         <!-- navbar begins here -->
         <div class="navbar">
             <div class="logo">
-                <p><a href="">Tech-Shop</a></p>
+                <h1><a href="">Tech-Shop</a></h1>
             </div>
 
             <div class="btn btn-group">
@@ -27,9 +27,11 @@
                         <a href=""><ion-icon name="search-outline"></ion-icon></a>
                     </button>
                 </div>
-                <div>
+                <div class="cart">
                     <button class="cart-btn">
                         <a href="cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+
+                        <span class="cart-value">4</span>
                     </button>
                 </div>
 
@@ -57,9 +59,8 @@
 
         <!-- iframe for signup / login page  -->
         <div class="iframe">
-            <div id="signupModal"
-                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; position: fixed; z-index: 5;">
-                <iframe src="account.html" style="border: none; width: 100%; height: 100%;">
+            <div id="signupModal">
+                <iframe src="signup.html" style="border: none; width: 100%; height: 100%;">
                 </iframe>
             </div>
 
@@ -68,6 +69,14 @@
                     document.getElementById('signupModal').style.display = 'block';
                 }
             </script>
+
+            <!-- 
+            <script>
+                document.querySelector('.login-popup-btn').addEventListener('click', function () {
+                    document.getElementById('signupModal').style.display = 'block';
+                });
+            </script>
+             -->
 
         </div>
 
@@ -81,12 +90,15 @@
                     <h3 class="cors-product-detail">Featherweight for <br>Comfort All-Day.</h3>
                     <h3 class="cors-dis-price">₹ 1,099 &ThickSpace;<span class="original-price">₹ 2,990</span></h3>
                 </div>
-
-                <button class="shop-btn-cors-one">Shop Now</button>
+                <a href="product.html">
+                    <button class="shop-btn-cors-one">Shop Now</button>
+                </a>
             </div>
 
             <div class="corousel-img">
-                <img src="/images/products/boat131-3.png" alt="picture">
+                <a href="product.html">
+                    <img src="/images/products/boat131-3.png" alt="picture">
+                </a>
             </div>
         </div>
 
@@ -104,7 +116,9 @@
                 <div class="ft-name">JBL Endurance Run Sports</div>
 
                 <div class="ft-card-img">
-                    <img src="/images/products/jbl-endu-1.png" alt="" class="ft-card-img">
+                    <a href="product.html">
+                        <img src="/images/products/jbl-endu-1.png" alt="" class="ft-card-img">
+                    </a>
                 </div>
 
                 <div class="discount-price">
@@ -118,7 +132,9 @@
                 <div class="ft-name">boAt Airdopes 203</div>
 
                 <div class="ft-card-img">
-                    <img src="/images/products/boat203-1.png" alt="" class="ft-card-img">
+                    <a href="product.html">
+                        <img src="/images/products/boat203-1.png" alt="" class="ft-card-img">
+                    </a>
                 </div>
 
                 <div class="discount-price">
@@ -131,7 +147,9 @@
                 <div class="ft-name">boAt Rockerz 518</div>
 
                 <div class="ft-card-img">
-                    <img src="/images/products/boat518-1.png" alt="" class="original-price">
+                    <a href="product.html">
+                        <img src="/images/products/boat518-1.png" alt="" class="original-price">
+                    </a>
                 </div>
 
                 <div class="discount-price">
@@ -144,7 +162,9 @@
                 <div class="ft-name">JBL Tune 760NC</div>
 
                 <div class="ft-card-img">
-                    <img src="/images/products/jbl760nc-1.png" alt="" class="ft-card-img">
+                    <a href="product.html">
+                        <img src="/images/products/jbl760nc-1.png" alt="" class="ft-card-img">
+                    </a>
                 </div>
 
                 <div class="discount-price">
@@ -157,7 +177,9 @@
                 <div class="ft-name">boAt Rockerz 255</div>
 
                 <div class="ft-card-img">
-                    <img src="/images/products/boat255r-1.png" alt="" class="ft-card-img">
+                    <a href="product.html">
+                        <img src="/images/products/boat255r-1.png" alt="" class="ft-card-img">
+                    </a>
                 </div>
 
                 <div class="discount-price">
@@ -195,7 +217,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/jbl660nc-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/jbl660nc-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -225,9 +249,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -235,7 +261,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat518-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat518-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -265,9 +293,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -275,7 +305,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat131-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat131-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -305,9 +337,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -315,7 +349,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat110-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat110-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -344,9 +380,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -354,7 +392,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat410-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat410-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -384,9 +424,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -394,7 +436,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/jbl200bt-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/jbl200bt-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -422,9 +466,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -432,7 +478,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/sonyXb910n-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/sonyXb910n-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -461,9 +509,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -471,7 +521,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/jbl760nc-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/jbl760nc-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -500,9 +552,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -510,7 +564,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/boat255r-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/boat255r-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -539,9 +595,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -549,7 +607,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/jbl100-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/jbl100-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -577,9 +637,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -587,7 +649,9 @@
                 <div class="card">
 
                     <div class="image">
-                        <img src="/images/products/sony1000xm4-1.png" alt="" class="image">
+                        <a href="product.html">
+                            <img src="/images/products/sony1000xm4-1.png" alt="" class="image">
+                        </a>
                     </div>
 
                     <div class="card-details">
@@ -615,9 +679,11 @@
                     </div>
 
                     <div class="add-cart">
-                        <button class="add-cart">
-                            <h3>Add to Cart</h3>
-                        </button>
+                        <a href="cart.html">
+                            <button class="add-cart">
+                                <h3>Add to Cart</h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -629,6 +695,7 @@
                             Browse All Products
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </p>
+
                     </div>
                 </div>
 
@@ -756,7 +823,7 @@
                     </button>
 
                     <button class="twitter-btn">
-                        <a href="https://x.com/i/flow/login"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="https://twitter.com/login?"><ion-icon name="logo-twitter"></ion-icon></a>
                     </button>
 
                     <button class="insta-btn">
