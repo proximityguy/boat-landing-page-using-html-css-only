@@ -16,8 +16,5 @@ This project is a responsive technology shop website built using HTML5 and CSS3.
 
 ## Getting Started
 
-To view or edit the project:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/proximityguy/tech-shop-htm5-css3.git
+To view the project:-
+https://tech-shop-online.netlify.app/
